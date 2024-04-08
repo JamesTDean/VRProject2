@@ -5,8 +5,10 @@ using Photon.Pun;
 
 public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
 {
+    public GameObject locations;
     private GameObject spawnedPlayerObject;
-    private GameObject spawnedGolfBall;
+    public List<GameObject> spawnedBalls = new List<GameObject>();
+    public List<GameObject> spawnedClubs = new List<GameObject>();
 
     void Start()
     {
@@ -17,14 +19,33 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     {
         base.OnJoinedRoom();
         spawnedPlayerObject = PhotonNetwork.Instantiate("NetworkPlayer", transform.position, transform.rotation);
-        spawnedGolfBall = PhotonNetwork.Instantiate("BallSet", transform.position, transform.rotation);
-        spawnedGolfBall.transform.position = new Vector3(-4.5f, -1f, 0.5f);
+        for (int i = 1; i < 4; i++)
+        {
+            string locationString = "Spawn" + i.ToString();
+            Transform location = locations.transform.Find(locationString);
+            GameObject spawnedGolfBall = PhotonNetwork.Instantiate("BallSet", location.position, location.rotation);
+            spawnedBalls.Add(spawnedGolfBall);
+            Vector3 clubPosition = location.position + new Vector3(0f, 1f, 0.5f);
+            GameObject spawnedGolfClub = PhotonNetwork.Instantiate("GolfClubInteractable", clubPosition, location.rotation);
+            spawnedClubs.Add(spawnedGolfClub);
+        }
     }
 
     public override void OnLeftRoom()
     {
         base.OnLeftRoom();
         PhotonNetwork.Destroy(spawnedPlayerObject);
-        PhotonNetwork.Destroy(spawnedGolfBall);
+        foreach (var ball in spawnedBalls)
+        {
+            //spawnedBalls.Remove(ball);
+            PhotonNetwork.Destroy(ball);
+        }
+        spawnedBalls = new List<GameObject>();
+        foreach (var club in spawnedClubs)
+        {
+            //spawnedClubs.Remove(club);
+            PhotonNetwork.Destroy(club);
+        }
+        spawnedClubs = new List<GameObject>();
     }
 }
