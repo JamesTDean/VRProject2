@@ -18,7 +18,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
         base.OnJoinedRoom();
         spawnedPlayerObject = PhotonNetwork.Instantiate("NetworkPlayer", transform.position, transform.rotation);
         spawnedGolfBall = PhotonNetwork.Instantiate("BallSet", transform.position, transform.rotation);
-        spawnedGolfBall.transform.position = new Vector3(1.5f, -1f, 3f);
+        spawnedGolfBall.transform.position = new Vector3(-4.5f, -1f, 0.5f);
     }
 
     public override void OnLeftRoom()
