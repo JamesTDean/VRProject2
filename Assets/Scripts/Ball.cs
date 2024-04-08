@@ -48,7 +48,7 @@ public class Ball : MonoBehaviour
 
     void OnCollisionExit(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.tag == "Club" && !isCooldown)
         {
             myPlayerManagerScript.AddStroke();
