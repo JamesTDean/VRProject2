@@ -14,6 +14,11 @@ public class speechDetection : MonoBehaviour
     public XRRayInteractor rayInteractor;
     public TextMeshProUGUI debugText;
 
+    public GameObject location1;
+    public GameObject location2;
+    public GameObject location3;
+    private Ball ball;
+
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +47,7 @@ public class speechDetection : MonoBehaviour
         {
             textmesh.SetText("changed!!!!!!!");
             debugText.SetText("restart, ball respawn!" + value[0]);
+            ball.respawn(location1);
         }
     }
 
@@ -55,11 +61,19 @@ public class speechDetection : MonoBehaviour
             if (hit.collider.gameObject.tag == "Ball")
             {
 
-                Debug.Log("hitting ball");
+                
                 debugText.SetText("hitting ball");
+                Ball ball = hit.collider.gameObject.GetComponent<Ball>();
+                if (ball != null)
+                {
+                    debugText.SetText("ball not null!");
+                }
+                
                 return true; // Ray Interactor is pointing at the ball
             }
         }
         return false; // Ray Interactor is not pointing at the ball
     }
+
+    
 }

@@ -48,6 +48,10 @@ public class Ball : MonoBehaviour
     private PlayerManager myPlayerManagerScript;
     private bool isCooldown;
 
+    //GameObject location1;
+    //GameObject location2;
+    //GameObject location3;
+
     void Start()
     {
         if (transform.GetComponentInParent<PhotonView>().IsMine)
@@ -111,6 +115,11 @@ public class Ball : MonoBehaviour
             isCooldown = true;
             cooldownTime = Time.time + 0.5f;
         }
+    }
+
+    public void respawn(GameObject resetLocation)
+    {
+        this.transform.position = resetLocation.transform.position;
     }
 }
 
