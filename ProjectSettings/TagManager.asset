@@ -7,6 +7,10 @@ TagManager:
   - Bullet
   - Ball
   - Club
+  - SpawnLocation
+  - Start1
+  - Start2
+  - Start3
   layers:
   - Default
   - TransparentFX
