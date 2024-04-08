@@ -472,7 +472,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 194226646}
-  - component: {fileID: 194226647}
   m_Layer: 0
   m_Name: C3Spawn1
   m_TagString: SpawnLocation
@@ -495,27 +494,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &194226647
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 194226645}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &230019294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 67985025491599638, guid: 06670040eb91cf943a4c94139e1fd9d1, type: 3}
@@ -606,7 +584,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 351168091}
-  - component: {fileID: 351168092}
   m_Layer: 0
   m_Name: C3Spawn2
   m_TagString: SpawnLocation
@@ -629,27 +606,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &351168092
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351168090}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &375972297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1092,7 +1048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1978951418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &428875505 stripped
 GameObject:
@@ -1130,7 +1086,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 454949331}
-  - component: {fileID: 454949332}
   m_Layer: 0
   m_Name: C2Spawn3
   m_TagString: SpawnLocation
@@ -1153,27 +1108,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &454949332
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 454949330}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &460057103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1117,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 460057104}
-  - component: {fileID: 460057105}
   m_Layer: 0
   m_Name: C2Spawn1
   m_TagString: SpawnLocation
@@ -1206,27 +1139,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &460057105
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460057103}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &484270845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,7 +1190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1978951418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &494839599
 GameObject:
@@ -1289,7 +1201,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 494839600}
-  - component: {fileID: 494839601}
   m_Layer: 0
   m_Name: C2Start
   m_TagString: Start2
@@ -1312,27 +1223,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &494839601
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494839599}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &502607106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5252682845850649624, guid: 06670040eb91cf943a4c94139e1fd9d1, type: 3}
@@ -1504,7 +1394,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 614685548}
-  - component: {fileID: 614685549}
   m_Layer: 0
   m_Name: C3Start
   m_TagString: Start3
@@ -1527,27 +1416,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &614685549
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614685547}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &652780864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8011406291537211873, guid: 06670040eb91cf943a4c94139e1fd9d1, type: 3}
@@ -1584,7 +1452,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 659326630}
-  - component: {fileID: 659326631}
   m_Layer: 0
   m_Name: C2Spawn5
   m_TagString: SpawnLocation
@@ -1607,27 +1474,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &659326631
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659326629}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &660060156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8009987137999418058, guid: 06670040eb91cf943a4c94139e1fd9d1, type: 3}
@@ -1839,7 +1685,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734351488}
-  - component: {fileID: 734351487}
   m_Layer: 0
   m_Name: C1Spawn2
   m_TagString: SpawnLocation
@@ -1847,27 +1692,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &734351487
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 734351486}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &734351488
 Transform:
   m_ObjectHideFlags: 0
@@ -2118,7 +1942,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1978951418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &910179825
 BoxCollider:
@@ -2177,7 +2001,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 936027842}
-  - component: {fileID: 936027843}
   m_Layer: 0
   m_Name: C3Spawn4
   m_TagString: SpawnLocation
@@ -2200,27 +2023,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &936027843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 936027841}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &950564900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4833800461449929029, guid: 06670040eb91cf943a4c94139e1fd9d1, type: 3}
@@ -2353,7 +2155,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1978951418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1039402922
 GameObject:
@@ -2793,7 +2595,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1085860108}
-  - component: {fileID: 1085860109}
   m_Layer: 0
   m_Name: C1Start
   m_TagString: Start1
@@ -2816,27 +2617,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1085860109
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085860107}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1144969564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1557060654295450219, guid: 06670040eb91cf943a4c94139e1fd9d1, type: 3}
@@ -3416,7 +3196,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481717263}
-  - component: {fileID: 1481717264}
   m_Layer: 0
   m_Name: C2Spawn2
   m_TagString: SpawnLocation
@@ -3439,27 +3218,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1481717264
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481717262}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1609054246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,7 +3243,7 @@ Transform:
   m_GameObject: {fileID: 1609054246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53, y: 12.94, z: -74.07}
+  m_LocalPosition: {x: 53, y: 14, z: -74.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3497,15 +3255,12 @@ Transform:
   - {fileID: 494839600}
   - {fileID: 1481717263}
   - {fileID: 454949331}
-  - {fileID: 2134148688}
   - {fileID: 659326630}
   - {fileID: 1645486973}
-  - {fileID: 2082676183}
   - {fileID: 1762519753}
   - {fileID: 194226646}
   - {fileID: 614685548}
   - {fileID: 351168091}
-  - {fileID: 13781651}
   - {fileID: 936027842}
   - {fileID: 1642059694}
   - {fileID: 1695425735}
@@ -3520,7 +3275,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1642059694}
-  - component: {fileID: 1642059695}
   m_Layer: 0
   m_Name: C3Spawn5
   m_TagString: SpawnLocation
@@ -3543,27 +3297,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1642059695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642059693}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1645486972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,7 +3306,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1645486973}
-  - component: {fileID: 1645486974}
   m_Layer: 0
   m_Name: C2Spawn6
   m_TagString: SpawnLocation
@@ -3596,27 +3328,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1645486974
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1645486972}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1684140829
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,7 +3337,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1684140831}
-  - component: {fileID: 1684140830}
   m_Layer: 0
   m_Name: C1Spawn3
   m_TagString: SpawnLocation
@@ -3634,27 +3344,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1684140830
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684140829}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1684140831
 Transform:
   m_ObjectHideFlags: 0
@@ -3679,7 +3368,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695425735}
-  - component: {fileID: 1695425736}
   m_Layer: 0
   m_Name: C3Spawn6
   m_TagString: SpawnLocation
@@ -3702,27 +3390,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1695425736
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1695425734}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1762519752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,7 +3399,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1762519753}
-  - component: {fileID: 1762519754}
   m_Layer: 0
   m_Name: C2Spawn8
   m_TagString: SpawnLocation
@@ -3755,27 +3421,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1609054247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1762519754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762519752}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1771703644
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,7 +3430,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1771703646}
-  - component: {fileID: 1771703645}
   m_Layer: 0
   m_Name: C1Spawn1
   m_TagString: SpawnLocation
@@ -3793,27 +3437,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1771703645
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1771703644}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1771703646
 Transform:
   m_ObjectHideFlags: 0
@@ -4040,7 +3663,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1978951418}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1828601335
 GameObject:
@@ -4358,9 +3981,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2407788002587789301, guid: af5a2845757348a4db6f24feab22878c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 85.27
+      objectReference: {fileID: 0}
     - target: {fileID: 3474854777353757694, guid: af5a2845757348a4db6f24feab22878c, type: 3}
       propertyPath: m_Name
       value: SpawnLocations
+      objectReference: {fileID: 0}
+    - target: {fileID: 5995241977728762845, guid: af5a2845757348a4db6f24feab22878c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.08
       objectReference: {fileID: 0}
     - target: {fileID: 7002774497181869604, guid: af5a2845757348a4db6f24feab22878c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4404,7 +4035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7343132302452850931, guid: af5a2845757348a4db6f24feab22878c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24.58
+      value: -24.39
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5477,6 +5108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: myGolfClubInteractable
       objectReference: {fileID: 0}
+    - target: {fileID: 6676465890575271352, guid: 66dd3633b7a37394fbf61848ef248b5e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8971062522293029061, guid: 66dd3633b7a37394fbf61848ef248b5e, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -5946,3 +5581,9 @@ SceneRoots:
   - {fileID: 375972297}
   - {fileID: 1952656041}
   - {fileID: 5993014394162431140}
+  - {fileID: 427778674}
+  - {fileID: 484270847}
+  - {fileID: 910179824}
+  - {fileID: 1038528778}
+  - {fileID: 1609054247}
+  - {fileID: 1813388105}

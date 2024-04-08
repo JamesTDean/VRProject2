@@ -18,7 +18,6 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
-        spawnedPlayerObject = PhotonNetwork.Instantiate("NetworkPlayer", transform.position, transform.rotation);
         for (int i = 1; i < 4; i++)
         {
             string locationString = "Spawn" + i.ToString();
@@ -31,10 +30,11 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
             {
                 golfClubString = "myGolfClubInteractable";
             }
-            Vector3 clubPosition = location.position + new Vector3(0f, 1f, 0.5f);
+            Vector3 clubPosition = location.position + new Vector3(0f, 1f, 1.5f);
             GameObject spawnedGolfClub = PhotonNetwork.Instantiate(golfClubString, clubPosition, location.rotation);
             spawnedClubs.Add(spawnedGolfClub);
         }
+        spawnedPlayerObject = PhotonNetwork.Instantiate("NetworkPlayer", transform.position, transform.rotation);
     }
 
     public override void OnLeftRoom()

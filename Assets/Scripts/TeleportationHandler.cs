@@ -2,13 +2,22 @@ using Photon.Pun;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
+using TMPro;
 
 public class TeleportationHandler : MonoBehaviourPunCallbacks
 {
     private List<Transform> spawnLocations = new List<Transform>(); // Dynamically filled based on tag
-    public InputAction leftTriggerAction;
+    //public InputAction leftTriggerAction;
     public GameObject ball; // Reference to the ball object
 
+    private PlayerManager myPlayerManager;
+    private InputData inputData;
+    private TextMeshProUGUI debugText;
+
+    public bool test;
+
+    /*
     private new void OnEnable()
     {
         base.OnEnable(); // It's good practice, though likely not needed here as per Photon's default implementation.
@@ -22,9 +31,15 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
         leftTriggerAction.Disable();
         leftTriggerAction.performed -= _ => AttemptTeleport();
     }
+    */
 
     void Start()
     {
+        GameObject leftHand = transform.Find("LeftHand").gameObject;
+        debugText = leftHand.transform.Find("Canvas").Find("DebugText").GetComponent<TextMeshProUGUI>();
+        GameObject myXROrigin = GameObject.Find("XR Origin (XR Rig)");
+        inputData = myXROrigin.GetComponent<InputData>();
+
         // Initialize spawn locations
         GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnLocation");
         foreach (GameObject spawnPoint in spawnPoints)
@@ -37,11 +52,36 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
             Debug.LogWarning("No spawn locations found with the 'SpawnLocation' tag.");
         }
 
+        myPlayerManager = GetComponent<PlayerManager>();
+
         // Optionally, find the ball object by tag if not set in the editor
         if (!ball)
         {
-            ball = GameObject.FindGameObjectWithTag("BallTag"); // Make sure your ball object has the correct tag
+            ball = myPlayerManager.currentBall;
         }
+    }
+
+    void Update()
+    {
+        if (inputData.rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.trigger, out float triggerValue))
+        {
+            if (triggerValue > 0.5f )
+            {
+                debugText.SetText("Trigger Pressed");
+                AttemptTeleport();
+            }
+            else
+            {
+                debugText.SetText("No Input");
+            }
+        }
+
+        if (test)
+        {
+            AttemptTeleport();
+            test = false;
+        }
+        
     }
 
     void AttemptTeleport()
@@ -55,11 +95,7 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
     [PunRPC]
     void TeleportPlayerToNearestLocation()
     {
-        if (!ball)
-        {
-            Debug.LogError("Ball object is not set.");
-            return;
-        }
+        ball = myPlayerManager.currentBall;
 
         Transform nearestSpawn = null;
         float shortestDistance = Mathf.Infinity;
