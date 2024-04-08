@@ -14,7 +14,7 @@ public class ConveyerScript : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log(other.gameObject.ToString());
+        //Debug.Log(other.gameObject.ToString());
 
         if (other.transform.tag == "Ball")
         {
