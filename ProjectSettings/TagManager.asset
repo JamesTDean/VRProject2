@@ -11,6 +11,10 @@ TagManager:
   - Start1
   - Start2
   - Start3
+  - RespawnPlane
+  - OutSpawn1
+  - OutSpawn2
+  - OutSpawn3
   layers:
   - Default
   - TransparentFX
