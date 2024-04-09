@@ -11,6 +11,7 @@ TagManager:
   - Start1
   - Start2
   - Start3
+  - BallTag
   layers:
   - Default
   - TransparentFX
