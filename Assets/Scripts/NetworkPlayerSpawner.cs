@@ -25,13 +25,8 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
             GameObject spawnedGolfBall = PhotonNetwork.Instantiate("BallSet", location.position, location.rotation);
             spawnedBalls.Add(spawnedGolfBall);
             PhotonView ballView = spawnedGolfBall.GetComponent<PhotonView>();
-            string golfClubString = "GolfClubInteractable";
-            if (ballView.IsMine)
-            {
-                golfClubString = "myGolfClubInteractable";
-            }
             Vector3 clubPosition = location.position + new Vector3(0f, 1f, 1.5f);
-            GameObject spawnedGolfClub = PhotonNetwork.Instantiate(golfClubString, clubPosition, location.rotation);
+            GameObject spawnedGolfClub = PhotonNetwork.Instantiate("GolfClubEmpty", clubPosition, location.rotation);
             spawnedClubs.Add(spawnedGolfClub);
         }
         spawnedPlayerObject = PhotonNetwork.Instantiate("NetworkPlayer", transform.position, transform.rotation);

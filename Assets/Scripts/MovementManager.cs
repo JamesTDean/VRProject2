@@ -24,6 +24,10 @@ public class MovementManager : MonoBehaviour
     private float yInput;
     private float movementSpeed = 5f;
 
+    [SerializeField]private NetworkPlayerSpawner myNetworkPlayerSpawner;
+    [SerializeField]private List<GameObject> invisiblePutters = new List<GameObject>();
+    [SerializeField]private List<GameObject> putterModels = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +47,14 @@ public class MovementManager : MonoBehaviour
         mainCamera = myXRRig.Find("Camera Offset").Find("Main Camera");
 
         debugText = leftHand.transform.Find("Canvas").Find("DebugText").GetComponent<TextMeshProUGUI>();
+
+        myNetworkPlayerSpawner = GameObject.Find("NetworkManager").GetComponent<NetworkPlayerSpawner>();
+        putterModels = myNetworkPlayerSpawner.spawnedClubs;
+        GameObject interactableClubs = GameObject.Find("UsersClubs");
+        foreach (Transform club in interactableClubs.transform)
+        {
+            invisiblePutters.Add(club.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -55,6 +67,12 @@ public class MovementManager : MonoBehaviour
 
             leftHand.transform.position = leftController.transform.position;
             rightHand.transform.position = rightController.transform.position;
+
+            for(int i = 0; i < 3; i++)
+            {
+                putterModels[i].transform.position = invisiblePutters[i].transform.Find("VisualAttachment").position;
+                putterModels[i].transform.rotation = invisiblePutters[i].transform.Find("VisualAttachment").rotation;
+            }
 
             if (inputData.rightController.TryGetFeatureValue(CommonUsages.primary2DAxis, out Vector2 movement))
             {
