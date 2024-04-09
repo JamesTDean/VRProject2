@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Ball
+  - Club
+  - SpawnLocation
+  - Start1
+  - Start2
+  - Start3
+  - Hole
   layers:
   - Default
   - TransparentFX

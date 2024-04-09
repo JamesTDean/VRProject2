@@ -377,7 +377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4632129104041588679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -568,6 +568,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightController: {fileID: 0}
+  myNetworkPlayerSpawner: {fileID: 0}
+  invisiblePutters: []
+  putterModels: []
 --- !u!114 &503305204947206617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +583,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba883a1aae80f7544bcc756ee7647d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  strokes: 
+  holeFinished: 
+  currentHoleIndex: 0
   currentBall: {fileID: 0}
 --- !u!114 &611353264872069637
 MonoBehaviour:
