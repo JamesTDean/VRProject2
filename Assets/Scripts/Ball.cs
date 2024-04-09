@@ -56,4 +56,12 @@ public class Ball : MonoBehaviour
             cooldownTime = Time.time + 0.5f;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Hole")
+        {
+            myPlayerManagerScript.holeFinished[myPlayerManagerScript.currentHoleIndex] = true;
+        }
+    }
 }

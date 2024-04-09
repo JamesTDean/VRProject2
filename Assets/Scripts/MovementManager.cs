@@ -71,21 +71,24 @@ public class MovementManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 upDirection = body.transform.up;
-        Vector3 forward = mainCamera.forward;
-
-        Vector2 inputDir = new Vector2(xInput, yInput);
-        Vector3 lookDirection = (forward - upDirection * Vector3.Dot(forward, upDirection)).normalized;
-        Quaternion rotation = Quaternion.AngleAxis(Vector2.Angle(new Vector2(0, 1f), inputDir.normalized), upDirection);
-        if (xInput < 0)
+        if (myView.IsMine)
         {
-            rotation = Quaternion.AngleAxis(-Vector2.Angle(new Vector2(0, 1f), inputDir.normalized), upDirection);
-        }
-        Vector3 velocityDirection = rotation * lookDirection;
-        float pushMagnitude = Vector2.SqrMagnitude(inputDir);
-        Vector3 verticalVelocity = new Vector3(0f, bodyRB.velocity.y, 0f);
-        bodyRB.velocity = movementSpeed * pushMagnitude * velocityDirection + verticalVelocity;
+            Vector3 upDirection = body.transform.up;
+            Vector3 forward = mainCamera.forward;
 
-        debugText.SetText(inputDir.ToString());
+            Vector2 inputDir = new Vector2(xInput, yInput);
+            Vector3 lookDirection = (forward - upDirection * Vector3.Dot(forward, upDirection)).normalized;
+            Quaternion rotation = Quaternion.AngleAxis(Vector2.Angle(new Vector2(0, 1f), inputDir.normalized), upDirection);
+            if (xInput < 0)
+            {
+                rotation = Quaternion.AngleAxis(-Vector2.Angle(new Vector2(0, 1f), inputDir.normalized), upDirection);
+            }
+            Vector3 velocityDirection = rotation * lookDirection;
+            float pushMagnitude = Vector2.SqrMagnitude(inputDir);
+            Vector3 verticalVelocity = new Vector3(0f, bodyRB.velocity.y, 0f);
+            bodyRB.velocity = movementSpeed * pushMagnitude * velocityDirection + verticalVelocity;
+
+            debugText.SetText(inputDir.ToString());
+        }
     }
 }

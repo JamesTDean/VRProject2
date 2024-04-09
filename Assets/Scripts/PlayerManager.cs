@@ -5,37 +5,46 @@ using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
-    private int strokes;
+    public List<int> strokes = new List<int>();
+    public List<bool> holeFinished = new List<bool>();
     private TextMeshProUGUI debugText;
     private NetworkPlayerSpawner myNetworkPlayerSpawner;
 
-    private int currentHole;
+    public int currentHoleIndex;
     public GameObject currentBall;
 
     // Start is called before the first frame update
     void Start()
     {
-        strokes = 0;
         GameObject leftHand = transform.Find("LeftHand").gameObject;
         debugText = leftHand.transform.Find("Canvas").Find("DebugText").GetComponent<TextMeshProUGUI>();
         myNetworkPlayerSpawner = GameObject.Find("NetworkManager").GetComponent<NetworkPlayerSpawner>();
-        currentHole = 0;
-        currentBall = myNetworkPlayerSpawner.spawnedBalls[currentHole];
+        currentHoleIndex = 0;
+        currentBall = myNetworkPlayerSpawner.spawnedBalls[currentHoleIndex];
+        strokes = new List<int> { 0, 0, 0 };
+        holeFinished = new List<bool> { false, false, false };
     }
 
     void Update()
     {
-        debugText.SetText(strokes.ToString());
+        //debugText.SetText(strokes.ToString());
     }
 
     public void AddStroke()
     {
-        strokes += 1;
+        if (!holeFinished[currentHoleIndex])
+        {
+            strokes[currentHoleIndex] += 1;
+        }
+        else
+        {
+            Debug.Log("Hole Finished");
+        }
     }
 
     public void UpdateHole(int holeNumber)
     {
-        currentHole = holeNumber;
-        currentBall = myNetworkPlayerSpawner.spawnedBalls[currentHole];
+        currentHoleIndex = holeNumber;
+        currentBall = myNetworkPlayerSpawner.spawnedBalls[currentHoleIndex];
     }
 }
