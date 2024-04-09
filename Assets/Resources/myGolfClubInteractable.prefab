@@ -97,8 +97,9 @@ GameObject:
   - component: {fileID: 667685258898057903}
   - component: {fileID: 2495857936051870986}
   - component: {fileID: 1268387268325425230}
+  - component: {fileID: 1676861698065561375}
   m_Layer: 0
-  m_Name: GolfClubInteractable
+  m_Name: myGolfClubInteractable
   m_TagString: Club
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -373,6 +374,28 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1676861698065561375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2192849800073292504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &3224564704456831571
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +456,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.09196884, y: 0.70110035, z: 0.09196884, w: 0.70110035}
   m_LocalPosition: {x: 1.533, y: -0.9770002, z: -0.6771}
-  m_LocalScale: {x: 0.026156457, y: 0.070026025, z: 0.24559718}
+  m_LocalScale: {x: 0.036328703, y: 0.09725915, z: 0.34110993}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 221828636512107471}
@@ -538,7 +561,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.11390126, w: 0.99349207}
   m_LocalPosition: {x: 1.5702, y: -0.8906, z: -0.68}
-  m_LocalScale: {x: 0.034339212, y: 0.034339212, z: 0.034339212}
+  m_LocalScale: {x: 0.04435596, y: 0.04435596, z: 0.04435596}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 221828636512107471}
