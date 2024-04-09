@@ -151,7 +151,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
-  m_UseLocal: 1
+  m_UseLocal: 0
 --- !u!1 &1064083370787617026
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba883a1aae80f7544bcc756ee7647d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentBall: {fileID: 0}
 --- !u!114 &611353264872069637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,16 +593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1519650a71062d34893c2f793f87109f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftTriggerAction:
-    m_Name: Left Trigger
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: cfafdfa6-4b82-4240-800c-dadd358d4aeb
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
   ball: {fileID: 0}
+  test: 0
 --- !u!1 &5686763965381786955
 GameObject:
   m_ObjectHideFlags: 0

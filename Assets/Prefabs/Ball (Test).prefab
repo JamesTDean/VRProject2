@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 5164584488717195370}
   - component: {fileID: 3029214084261835910}
   - component: {fileID: 4470867010855878144}
+  - component: {fileID: -6473965202060780125}
   m_Layer: 7
   m_Name: Ball (Test)
-  m_TagString: Ball
+  m_TagString: BallTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,3 +147,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2171eb190bd2b7846b1a0bfdca14c819, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6473965202060780125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137385088298901230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
