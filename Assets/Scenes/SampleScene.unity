@@ -3545,6 +3545,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ballSet
       objectReference: {fileID: 0}
+    - target: {fileID: 5267156313663049281, guid: 87a7e8c2082fd0e4caaf156b7255e724, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6845353450454738735, guid: 87a7e8c2082fd0e4caaf156b7255e724, type: 3}
       propertyPath: sceneViewId
       value: 4
@@ -4609,7 +4613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1174366982}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -7686,7 +7690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6803edce0201f574f923fd9d10e5b30a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 1174366982}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295

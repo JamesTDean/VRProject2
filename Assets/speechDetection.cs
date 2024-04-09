@@ -43,10 +43,10 @@ public class speechDetection : MonoBehaviour
     public void transcription(string[] value)
     {
 
-        //textmesh.SetText("value: " + value[0]);
+        
         if (value[0].Equals("restart") || value[0].Equals("Restart"))
         {
-            debugText.SetText("restart!!!");
+            //debugText.SetText("activated");
             voiceActivated = true;
             
 
@@ -59,18 +59,34 @@ public class speechDetection : MonoBehaviour
         // Check if the Ray Interactor has a valid hit
         if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            debugText.SetText("hitting sth");
+            //debugText.SetText("hitting sth");
 
             if (hit.collider.gameObject.tag == "BallTag")
             {
 
 
-                debugText.SetText("hitting ball");
+                //debugText.SetText("hitting ball");
                 Ball ball = hit.collider.gameObject.GetComponent<Ball>();
                 if (ball != null && voiceActivated)
                 {
-                    textmesh.SetText("ball respawn!");
-                    ball.respawn(location1);
+                    //debugText.SetText("ball respawn!");
+                    int course = ball.course;
+                    if (course == 1)
+                    {
+                        //debugText.SetText("hitting ball1111111: " + ball.course);
+                        ball.respawn(location1);
+                    }
+                    if (course == 2)
+                    {
+                        //debugText.SetText("hitting ball2");
+                        ball.respawn(location2);
+                    }
+                    if (course == 3)
+                    {
+                        //debugText.SetText("hitting ball3");
+                        ball.respawn(location3);
+                    }
+
                     voiceActivated = false;
                 }
 

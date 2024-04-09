@@ -99,6 +99,8 @@ public class Ball : MonoBehaviour
     private PlayerManager myPlayerManagerScript;
     private bool isCooldown;
 
+    public int course;
+
     //public bool voiceActivated;
 
     void Start()
