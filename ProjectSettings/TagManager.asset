@@ -3,18 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Bullet
-  - Ball
-  - Club
-  - SpawnLocation
-  - Start1
-  - Start2
-  - Start3
-  - RespawnPlane
-  - OutSpawn1
-  - OutSpawn2
-  - OutSpawn3
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -22,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Body
-  - Ball
-  - MyBall
+  - 
+  - 
+  - 
   - 
   - 
   - 

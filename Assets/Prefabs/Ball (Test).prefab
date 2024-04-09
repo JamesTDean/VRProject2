@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1055777165059210906}
   m_Layer: 7
   m_Name: Ball (Test)
-  m_TagString: Ball
+  m_TagString: BallTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
