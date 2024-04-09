@@ -20,12 +20,19 @@ public class speechDetection : MonoBehaviour
     private Ball ball;
     public bool voiceActivated;
 
+    public bool ui;
+
+    public GameObject window;
+
+    //public GameObject canvas;
+
 
     // Start is called before the first frame update
     void Start()
     {
 
         voiceActivated = false;
+        ui = false;
     }
 
     // Update is called once per frame
@@ -34,6 +41,7 @@ public class speechDetection : MonoBehaviour
         if (IsRayInteractorPointingAtBall())
         {
             wit.Activate();
+            
             
 
         }
@@ -47,6 +55,7 @@ public class speechDetection : MonoBehaviour
         if (value[0].Equals("restart") || value[0].Equals("Restart"))
         {
             //debugText.SetText("activated");
+            window.SetActive(true);
             voiceActivated = true;
             
 
@@ -67,8 +76,9 @@ public class speechDetection : MonoBehaviour
 
                 //debugText.SetText("hitting ball");
                 Ball ball = hit.collider.gameObject.GetComponent<Ball>();
-                if (ball != null && voiceActivated)
+                if (ball != null && voiceActivated && ui)
                 {
+                    
                     //debugText.SetText("ball respawn!");
                     int course = ball.course;
                     if (course == 1)
@@ -88,6 +98,7 @@ public class speechDetection : MonoBehaviour
                     }
 
                     voiceActivated = false;
+                    this.ui = false;
                 }
 
                 return true; // Ray Interactor is pointing at the ball

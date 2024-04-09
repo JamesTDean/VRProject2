@@ -10,9 +10,14 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
     public List<GameObject> spawnedBalls = new List<GameObject>();
     public List<GameObject> spawnedClubs = new List<GameObject>();
 
+    Color[] colors;
+
     void Start()
     {
-
+        colors = new Color[3];
+        colors[0] = new Color(0, 0, 1f);
+        colors[1] = new Color(0.5f, 0f, 0.5f);
+        colors[2] = new Color(1f, 0, 0);
     }
 
     public override void OnJoinedRoom()
@@ -27,7 +32,10 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
             Transform ballTransform = spawnedGolfBall.transform.GetChild(1);
             Ball ball = ballTransform.gameObject.GetComponent<Ball>();
             ball.course = i;
-            Debug.Log(ball.course);
+
+            // change color
+            ballTransform.gameObject.GetComponent<Renderer>().material.color = colors[i - 1];
+
 
             spawnedBalls.Add(spawnedGolfBall);
             PhotonView ballView = spawnedGolfBall.GetComponent<PhotonView>();
@@ -38,6 +46,7 @@ public class NetworkPlayerSpawner : MonoBehaviourPunCallbacks
             }
             Vector3 clubPosition = location.position + new Vector3(0f, 1f, 1.5f);
             GameObject spawnedGolfClub = PhotonNetwork.Instantiate(golfClubString, clubPosition, location.rotation);
+            spawnedGolfClub.GetComponent<Renderer>().material.color = colors[i - 1];
             spawnedClubs.Add(spawnedGolfClub);
         }
         spawnedPlayerObject = PhotonNetwork.Instantiate("NetworkPlayer", transform.position, transform.rotation);
