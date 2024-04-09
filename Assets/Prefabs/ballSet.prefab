@@ -150,7 +150,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2137385088298901230, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_Name
-      value: Ball (Test)
+      value: GolfBall
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalPosition.x
@@ -158,7 +158,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.148
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalPosition.z
@@ -166,19 +166,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4310083784841098263, guid: 2dd48662cd0b14049a933e98fce6e611, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
