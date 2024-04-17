@@ -80,11 +80,6 @@
 //            cooldownTime = Time.time + 0.5f;
 //        }
 //    }
-
-//    public void respawn(GameObject resetLocation)
-//    {
-//        this.transform.position = resetLocation.transform.position;
-//    }
 //}
 
 using System.Collections;
@@ -159,5 +154,10 @@ public class Ball : MonoBehaviour
         {
             myPlayerManagerScript.holeFinished[myPlayerManagerScript.currentHoleIndex] = true;
         }
+    }
+
+    public void respawn(GameObject resetLocation)
+    {
+        this.transform.position = resetLocation.transform.position;
     }
 }

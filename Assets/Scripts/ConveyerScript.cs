@@ -5,18 +5,18 @@ using UnityEngine;
 public class ConveyerScript : MonoBehaviour
 {
     public Vector3 forceDirection;
-    private float forceMagnitude;
+    public float forceMagnitude;
 
     void Start()
     {
-        forceMagnitude = 5f;
+        //forceMagnitude = 5f;
     }
 
     private void OnTriggerStay(Collider other)
     {
         //Debug.Log(other.gameObject.ToString());
 
-        if (other.transform.tag == "Ball")
+        if (other.transform.tag == "BallTag")
         {
             Rigidbody ballRB = null;
             try

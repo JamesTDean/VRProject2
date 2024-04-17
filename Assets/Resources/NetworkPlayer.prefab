@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 609541004982310005}
   - component: {fileID: 1181941612260561584}
   - component: {fileID: 9000541606352656883}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 8850105177960882289}
   - component: {fileID: 8521491284939399139}
   - component: {fileID: 3917088825175167642}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 4632129104041588679}
   - component: {fileID: 5683840672980105188}
   - component: {fileID: 6138286136911567957}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DebugText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: -6517362033622289881}
   - component: {fileID: 503305204947206617}
   - component: {fileID: 611353264872069637}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: NetworkPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 5713070954246828932}
   - component: {fileID: 7021511370761163081}
   - component: {fileID: 7560211611652681005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

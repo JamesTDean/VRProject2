@@ -15,6 +15,9 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
     private InputData inputData;
     private TextMeshProUGUI debugText;
 
+    private bool isCooldown;
+    private float cooldownTime;
+
     public bool test;
 
     /*
@@ -59,10 +62,18 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
         {
             ball = myPlayerManager.currentBall;
         }
+
+        isCooldown = false;
+        cooldownTime = Time.time;
     }
 
     void Update()
     {
+        if (Time.time > cooldownTime)
+        {
+            isCooldown = false;
+        }
+
         if (inputData.rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.trigger, out float triggerValue))
         {
             if (triggerValue > 0.5f )
@@ -73,6 +84,18 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
             else
             {
                 debugText.SetText("No Input");
+            }
+        }
+
+        if (inputData.rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out bool primaryPress))
+        {
+            if (primaryPress && !isCooldown)
+            {
+                int nextHole = myPlayerManager.currentHoleIndex + 1;
+                myPlayerManager.UpdateHole(nextHole);
+                AttemptTeleport();
+                isCooldown = true;
+                cooldownTime = Time.time + 1;
             }
         }
 
@@ -95,7 +118,7 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
     [PunRPC]
     void TeleportPlayerToNearestLocation()
     {
-        ball = myPlayerManager.currentBall;
+        ball = myPlayerManager.currentBall.transform.Find("Ball (Test)").gameObject;
 
         Transform nearestSpawn = null;
         float shortestDistance = Mathf.Infinity;
@@ -111,9 +134,11 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
             }
         }
 
+        Transform playerBody = gameObject.transform.Find("Body");
+
         if (nearestSpawn != null)
         {
-            this.transform.position = nearestSpawn.position; // Teleport player to the nearest spawn to the ball
+            playerBody.position = nearestSpawn.position; // Teleport player to the nearest spawn to the ball
         }
     }
 }
