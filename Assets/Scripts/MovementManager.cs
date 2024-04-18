@@ -106,7 +106,7 @@ public class MovementManager : MonoBehaviour
             Vector3 verticalVelocity = new Vector3(0f, bodyRB.velocity.y, 0f);
             bodyRB.velocity = movementSpeed * pushMagnitude * velocityDirection + verticalVelocity;
 
-            debugText.SetText(inputDir.ToString());
+            //debugText.SetText(inputDir.ToString());
         }
     }
 }
