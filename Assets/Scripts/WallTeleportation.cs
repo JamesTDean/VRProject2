@@ -5,21 +5,30 @@ using UnityEngine;
 public class WallTeleportation : MonoBehaviour
 {
     // Use serialized fields to assign these in the Inspector.
-    [SerializeField] private GameObject[] holes;
-    [SerializeField] private GameObject[] destinations;
+    [SerializeField] private List<GameObject> holes = new List<GameObject>();
+    [SerializeField] private List<GameObject> destinations = new List<GameObject>();
 
     private void Start()
     {
-        // Verify that each hole has a corresponding destination
-        if (holes.Length != destinations.Length)
+        GameObject holesHolder = GameObject.Find("Course3");
+
+        for(int i = 0; i < 6; i++)
         {
-            Debug.LogError("Holes and destinations count do not match.");
+            GameObject child = holesHolder.transform.GetChild(i).gameObject;
+            if (i < 3)
+            {
+                holes.Add(child);
+            }
+            else
+            {
+                destinations.Add(child);
+            }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < holes.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
             // Check if the colliding object is one of the holes
             if (other.gameObject == holes[i])
@@ -31,7 +40,7 @@ public class WallTeleportation : MonoBehaviour
                 transform.position = destinations[i].transform.position;
 
                 // Reapply the velocity
-                GetComponent<Rigidbody>().velocity = velocity;
+                GetComponent<Rigidbody>().velocity = new Vector3(-velocity.x, velocity.y, velocity.z);
 
                 // Exit the loop once the correct hole is found and processed
                 break;

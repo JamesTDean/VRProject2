@@ -80,11 +80,6 @@
 //            cooldownTime = Time.time + 0.5f;
 //        }
 //    }
-
-//    public void respawn(GameObject resetLocation)
-//    {
-//        this.transform.position = resetLocation.transform.position;
-//    }
 //}
 
 using System.Collections;
@@ -140,6 +135,11 @@ public class Ball : MonoBehaviour
         {
             isCooldown = false;
         }
+        if (velocity < 0.1f)
+        {
+            ballRigidbody.velocity = new Vector3(0, 0, 0);
+        }
+
     }
 
     void OnCollisionExit(Collision collision)
@@ -152,10 +152,17 @@ public class Ball : MonoBehaviour
             cooldownTime = Time.time + 0.5f;
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Hole")
+        {
+            myPlayerManagerScript.holeFinished[myPlayerManagerScript.currentHoleIndex] = true;
+        }
+    }
+
     public void respawn(GameObject resetLocation)
     {
         this.transform.position = resetLocation.transform.position;
-        //this.voiceActivated = false;
-
     }
 }

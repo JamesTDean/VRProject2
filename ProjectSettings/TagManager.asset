@@ -11,7 +11,10 @@ TagManager:
   - Start1
   - Start2
   - Start3
+  - Hole
   - BallTag
+  - RespawnPlane
+  - OutSpawn3
   layers:
   - Default
   - TransparentFX
@@ -21,8 +24,8 @@ TagManager:
   - UI
   - Body
   - Ball
-  - MyBall
-  - 
+  - myBall
+  - Club
   - 
   - 
   - 

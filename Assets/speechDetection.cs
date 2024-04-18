@@ -21,16 +21,15 @@ public class speechDetection : MonoBehaviour
     public bool voiceActivated;
 
     public bool ui;
+    bool isHit;
 
     public GameObject window;
-
-    //public GameObject canvas;
-
+    
 
     // Start is called before the first frame update
     void Start()
     {
-
+        isHit = false;
         voiceActivated = false;
         ui = false;
     }
@@ -42,9 +41,8 @@ public class speechDetection : MonoBehaviour
         {
             wit.Activate();
             
-            
-
         }
+        check(ball);
     }
 
 
@@ -54,12 +52,10 @@ public class speechDetection : MonoBehaviour
         
         if (value[0].Equals("restart") || value[0].Equals("Restart"))
         {
-            //debugText.SetText("activated");
+            
             window.SetActive(true);
             voiceActivated = true;
             
-
-            //ball.respawn(location1, debugText);
         }
     }
 
@@ -68,43 +64,55 @@ public class speechDetection : MonoBehaviour
         // Check if the Ray Interactor has a valid hit
         if (rayInteractor.TryGetCurrent3DRaycastHit(out RaycastHit hit))
         {
-            //debugText.SetText("hitting sth");
-
             if (hit.collider.gameObject.tag == "BallTag")
             {
+                ball = hit.collider.gameObject.GetComponent<Ball>();
 
-
+                isHit = true;
                 //debugText.SetText("hitting ball");
-                Ball ball = hit.collider.gameObject.GetComponent<Ball>();
-                if (ball != null && voiceActivated && ui)
-                {
-                    
-                    //debugText.SetText("ball respawn!");
-                    int course = ball.course;
-                    if (course == 1)
-                    {
-                        //debugText.SetText("hitting ball1111111: " + ball.course);
-                        ball.respawn(location1);
-                    }
-                    if (course == 2)
-                    {
-                        //debugText.SetText("hitting ball2");
-                        ball.respawn(location2);
-                    }
-                    if (course == 3)
-                    {
-                        //debugText.SetText("hitting ball3");
-                        ball.respawn(location3);
-                    }
 
-                    voiceActivated = false;
-                    this.ui = false;
-                }
+
 
                 return true; // Ray Interactor is pointing at the ball
             }
+
+
+            
         }
         return false; // Ray Interactor is not pointing at the ball
+    }
+
+    void check(Ball obj)
+    {
+        
+            if (isHit && voiceActivated && ui)
+            {
+
+                //debugText.SetText("ball respawn!");
+                int course = obj.course;
+                if (course == 1)
+                {
+                    //debugText.SetText("hitting ball1111111: " + ball.course);
+                    obj.respawn(location1);
+                }
+                if (course == 2)
+                {
+                    //debugText.SetText("hitting ball2");
+                    obj.respawn(location2);
+                }
+                if (course == 3)
+                {
+                    //debugText.SetText("hitting ball3");
+                    obj.respawn(location3);
+                }
+
+                voiceActivated = false;
+                this.ui = false;
+                isHit = false;
+            }
+
+
+        //}
     }
 
 
