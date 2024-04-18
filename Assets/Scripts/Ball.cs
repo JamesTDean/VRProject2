@@ -135,6 +135,11 @@ public class Ball : MonoBehaviour
         {
             isCooldown = false;
         }
+        if (velocity < 0.1f)
+        {
+            ballRigidbody.velocity = new Vector3(0, 0, 0);
+        }
+
     }
 
     void OnCollisionExit(Collision collision)
