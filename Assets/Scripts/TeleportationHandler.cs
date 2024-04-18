@@ -78,15 +78,16 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
         {
             if (triggerValue > 0.5f )
             {
-                debugText.SetText("Trigger Pressed");
+                //debugText.SetText("Trigger Pressed");
                 AttemptTeleport();
             }
             else
             {
-                debugText.SetText("No Input");
+                //debugText.SetText("No Input");
             }
         }
 
+        /*
         if (inputData.rightController.TryGetFeatureValue(UnityEngine.XR.CommonUsages.primaryButton, out bool primaryPress))
         {
             if (primaryPress && !isCooldown)
@@ -98,6 +99,7 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
                 cooldownTime = Time.time + 1;
             }
         }
+        */
 
         if (test)
         {
@@ -107,7 +109,15 @@ public class TeleportationHandler : MonoBehaviourPunCallbacks
         
     }
 
-    void AttemptTeleport()
+    public void MoveHoles(int holeNum)
+    {
+        myPlayerManager.UpdateHole(holeNum);
+        AttemptTeleport();
+        isCooldown = true;
+        cooldownTime = Time.time + 1;
+    }
+
+    public void AttemptTeleport()
     {
         if (photonView.IsMine)
         {
